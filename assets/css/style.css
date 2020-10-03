@@ -1,6 +1,13 @@
 body{
     background: #f1f1f1;
     padding: 60px 0 0 0;
+    background-image: url("../img/bg.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: auto;
 }
 a:hover{-webkit-transition:all ease-out .15s;-moz-transition:all ease-out .15s;-o-transition:all ease-out .15s;transition:all ease-out .15s;-webkit-transition:all ease-in .15s;-moz-transition:all ease-in .15s;-o-transition:all ease-in .15s;transition:all ease-in .15s}
 .vertical-middle{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
@@ -10,6 +17,20 @@ a:hover{-webkit-transition:all ease-out .15s;-moz-transition:all ease-out .15s;-
 /*CSS For Websocket*/
 #home{width:100%;height:100vh;position:relative}
 
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-sm-6 {
+    width: calc(50% - 30px);
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* margin: 0 -15px; */
+    margin-bottom: 30px;
+}
 .header {
     width: 100%;
     overflow: hidden;
@@ -108,4 +129,350 @@ a:hover{-webkit-transition:all ease-out .15s;-moz-transition:all ease-out .15s;-
 }
 @media (max-width:600px) and (min-width:240px) {
 
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2c3345;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 752px;
+}
+.form--wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0 30px 39px;
+    list-style: none;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.header-text {
+    padding: 20px 50px;
+    /* font-family: "Inter", sans-serif; */
+    border-bottom: 1px solid #65555f;
+    width: 100%;
+}
+.header-text h1 {
+    padding: 0;
+    margin: 0;
+}
+.form--group {
+    margin-top: 30px;
+    text-align: left;
+    width: 100%;
+}
+.form--group label {
+    /* width: 100%; */
+    margin-bottom: 14px;
+    display: block;
+}
+.form--group input {
+    background-color: #fff;
+    border: 1px solid #8292a2 !important;
+    color: #2c3345;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid;
+    display: block;
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 310px;
+}
+
+/*CSS For Customize Date Picker*/
+input[type="date"] {
+    display:block;
+    position:relative;
+    padding:1rem 3.5rem 1rem 0.75rem;
+    font-size:1rem;
+    font-family:monospace;
+    border:1px solid #8292a2;
+    border-radius:0.25rem;
+    background:
+            white
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23688EBB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0L13 4M5 0L5 4M0 8L18 8'/%3E%3C/g%3E%3C/svg%3E")
+            right 1rem
+            center
+            no-repeat;
+    cursor:pointer;
+    width: 262px;
+}
+input[type="date"]:focus {
+    outline:none;
+    border-color:#3acfff;
+    box-shadow:0 0 0 0.25rem rgba(0, 120, 250, 0.1);
+}
+
+::-webkit-datetime-edit {}
+::-webkit-datetime-edit-fields-wrapper {}
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-year-field:hover {
+    background:rgba(0, 120, 250, 0.1);
+}
+::-webkit-datetime-edit-text {
+    opacity:0;
+}
+::-webkit-clear-button,
+::-webkit-inner-spin-button {
+    display:none;
+}
+::-webkit-calendar-picker-indicator {
+    position:absolute;
+    width:2.5rem;
+    height:100%;
+    top:0;
+    right:0;
+    bottom:0;
+
+    opacity:0;
+    cursor:pointer;
+
+    color:rgba(0, 120, 250, 1);
+    background:rgba(0, 120, 250, 1);
+
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator { opacity:0.05; }
+input[type="date"]:hover::-webkit-calendar-picker-indicator:hover { opacity:0.15; }
+
+/*CSS For Admin Page*/
+.admin--panel {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2c3345;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    /* width: 400px; */
+    max-width: 80%;
+}
+.admin--panel .search {
+    padding: 20px 0 30px;
+}
+.admin--panel .search input {
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #c3cad8;
+    color: #2c3345;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid;
+    /* display: block; */
+    font-size: 16px;
+    padding: 10px 10px;
+    width: 300px;
+}
+.user--details-table {
+    padding: 0 30px 30px;
+}
+.user--details-table table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: scroll;
+}
+.user--details-table table tr {
+    /* background-color: rgba(255,255,255,0.9); */
+}
+.user--details-table tr th {}
+.user--details-table tr th, .user--details-table table td  {
+    border: 1px solid #574c58;
+    padding: 8px;
+}
+.user--details-table tr td {
+    /* background-color: rgba(255,255,255,0.9); */
+    padding: 15px 5px;
+}
+
+.user--details-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.user--details-table tr:hover {background-color: #ddd;}
+
+/*CSS For Custome Select*/
+.form-dropdown {
+    padding: 0 1.875em 0 .625em;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: right 10px bottom 50%;
+    background-size: .625em;
+    background-repeat: no-repeat;
+}
+
+.form-dropdown, .form-textarea, .form-textbox {
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid;
+    display: block;
+    /* min-width: 100%; */
+}
+.form-textbox {
+
+}
+.form-dropdown, .form-textarea, .form-textbox {
+    background-color: #fff;
+    /* border-color: #c3cad8; */
+    /* color: #2c3345; */
+    border: 1px solid #8292a2;
+}
+.form-dropdown, .form-textbox {
+    /* height: 24px; */
+}
+.form-dropdown {
+    /* font-weight: 300; */
+    height: 40px;
+    width: 332px;
+    border: 1px solid #8292a2;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-spinner-input {
+    width: 310px;
+    border: 1px solid #8292a2;
+    height: 40px;
+}
+.form-spinner-input span{
+    width: calc(100% - 74px);
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    /* height: 26px; */
+    vertical-align: middle;
+    padding: 11px 0 11px;
+    font-size: 16px;
+}
+.form-spinner-input button {}
+.form-spinner-input button {
+    background-color: #d4d4d4;
+    border: 0;
+    padding: 0 13px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.form-textarea {
+    height: 80px;
+    width: 80%;
+    padding: 15px;
+}
+.submit--form {
+    text-align: center;
+}
+.submit-button {
+    background-color: #18bd5b;
+    border-color: #18bd5b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: 170px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #16aa52;
+}
+p.error {
+    color: #fff;
+    background-color: #f23a3c;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='14' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 14.515a7 7 0 110-14 7 7 0 010 14zm-.814-5.86h1.628v-5.21H6.186v5.21zM7 11.259a.82.82 0 00.814-.824A.816.816 0 007 9.631a.813.813 0 100 1.628z' fill='%23fff'/%3E%3C/svg%3E");
+    font-size: .75em;
+    margin-top: 5px;
+    border-radius: 4px;
+    background-size: 12px;
+    background-position: 4px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: auto;
+    padding: 5px 5px 5px 20px;
+}
+
+/*CSS For User Details Page*/
+.user--details {
+    width: 400px;
+}
+.user--details ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.user--details li label{
+    font-weight: 600;
+    width: 150px;
+    display: inline-block;
+}
+.user--details li {
+    display: block;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #8292a2;
+}
+.user--details li span {
+    width: calc(100% - 154px);
+    display: inline-block;
+    word-break: break-all;
+    vertical-align: middle;
+}
+.report--details {
+    margin: 30px 0 0 0;
+}
+.submit-buttons {
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.submit-buttons span {
+    border: 1px solid #000;
+    padding: 5px 15px;
+    margin: 0 10px 30px;
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+.submit-buttons span:nth-child(2) {
+    background-color: green;
+    color: #fff;
+    border-color: #003800;
+}
+@media (max-width: 768px) {
+    .col-sm-6 {
+        width: calc(100% - 30px);
+    }
+    .chart--wrapper {
+        height: 320px !important;
+    }
+    .form--group input, .form-dropdown, .form-spinner-input, .form-textarea {
+        width: 100%;
+    }
+    input[type="date"] {
+        padding: 1rem 0.5rem 1rem 0.75rem;
+    }
+    .form-textarea {
+        padding: 0;
+    }
+    .header-text h1 {
+        font-size: 24px;
+    }
+    .admin--panel {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .user--details-table {
+        padding: 0;
+        overflow-x: auto;
+    }
+    .form--group {
+        margin-top: 10px;
+    }
 }
